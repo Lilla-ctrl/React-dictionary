@@ -8,7 +8,7 @@ export default function Dictionary() {
   const [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    /* console.log(response.data[0].meanings); */
+    console.log(response.data[0].meanings);
     setResults(response.data[0]);
   }
 
