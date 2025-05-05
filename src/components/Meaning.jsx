@@ -1,4 +1,4 @@
 export default function meaning(props) {
   console.log(props.meaning);
-  return "Hello from meaning";
+  return <h3>{props.meaning.partOfSpeech}</h3>;
 }
