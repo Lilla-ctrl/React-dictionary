@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../style/Dictionary.css";
 import Results from "./Results";
-import Pictures from "./Photos";
+import Pictures from "./Pictures";
 import axios from "axios";
 
 export default function Dictionary() {
@@ -14,7 +14,6 @@ export default function Dictionary() {
   }
 
   function handleImageResponse(response) {
-    console.log(response.data);
     setPictures(response.data.photos);
   }
 
