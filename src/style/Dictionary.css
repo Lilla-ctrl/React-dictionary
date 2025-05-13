@@ -31,11 +31,21 @@ h3 {
   font-weight: 600;
 }
 
-p, em {
+p,
+em {
   margin: 8px 0;
   line-height: 1.6;
 }
 
 section {
   animation: fadeIn 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa-volume-high {
+  color: #ffb5b5;
+  padding-right: 5px;
 }

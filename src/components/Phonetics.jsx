@@ -1,14 +1,16 @@
 export default function Phonetics(props) {
   return (
     <div>
-      <div>{props.phonetic.text}</div>
       {props.phonetic.audio && (
-        <div>
+        <span>
           <a href={props.phonetic.audio} target="_blank" rel="noreferrer">
-            🔊
+            <span>
+              <i class="fa-solid fa-volume-high"></i>
+            </span>
           </a>
-        </div>
+        </span>
       )}
+      <span>{props.phonetic.text}</span>
     </div>
   );
 }
