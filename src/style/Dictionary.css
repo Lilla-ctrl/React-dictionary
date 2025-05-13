@@ -2,7 +2,6 @@
   margin: 10px auto;
   padding: 20px;
   max-width: 600px;
-  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -55,7 +54,15 @@ a {
   text-decoration: none;
 }
 
+footer {
+  margin: 20px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
 .fa-volume-high {
   color: #ffb5b5;
   padding-right: 5px;
 }
+

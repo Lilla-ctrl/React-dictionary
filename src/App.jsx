@@ -5,14 +5,12 @@ function App() {
   return (
     <>
       <div className="container">
-        <header>
-          Dictionary
-        </header>
+        <header>Dictionary</header>
         <main>
           <Dictionary />
+          <footer>Coded by Lilla</footer>
         </main>
       </div>
-      <footer className="text-center">Coded by Lilla</footer>
     </>
   );
 }
