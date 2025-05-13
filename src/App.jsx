@@ -8,7 +8,23 @@ function App() {
         <header>Dictionary</header>
         <main>
           <Dictionary />
-          <footer>Coded by Lilla</footer>
+          <footer>
+            <strong>
+              <a
+                className="footer-link"
+                href="https://github.com/Lilla-ctrl/react-dictionary"
+              >
+                Coded{" "}
+              </a>
+            </strong>
+            by
+            <strong>
+              <a className="footer-link" href="https://github.com/Lilla-ctrl">
+                {" "}
+                Lilla.
+              </a>
+            </strong>
+          </footer>
         </main>
       </div>
     </>
