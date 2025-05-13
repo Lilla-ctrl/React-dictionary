@@ -22,14 +22,21 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
 
+  function handleSynonymClick(synonym) {
+    setKeyword(synonym);
+
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${synonym}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   return (
     <div className="dictionary">
       <section>
         <form onSubmit={search}>
-          <input type="search" onChange={handleKeywordChange} />
+          <input placeholder="Which word are you interested in?" type="search" onChange={handleKeywordChange} />
         </form>
       </section>
-      <Results results={results} />
+      <Results results={results} onSynonymClick={handleSynonymClick}/>
     </div>
   );
 }

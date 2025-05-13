@@ -1,14 +1,14 @@
 import Synonyms from "./Synonyms";
 import "../style/Meaning.css";
 
-export default function Meaning(props) {
+export default function Meaning({meaning, onSynonymClick}) {
   return (
     <div className="meaning-group">
-      <h3>{props.meaning.partOfSpeech}</h3>
-      {props.meaning.definitions.map(function (definition, index) {
+      <h3>{meaning.partOfSpeech}</h3>
+      {meaning.definitions.map(function (definition, index) {
         return (
           <section key={index}>
-            <strong>Definition: </strong>
+            <strong>Meaning: </strong>
             <p>{definition.definition}</p>
             <br />
             {definition.example && (
@@ -21,10 +21,13 @@ export default function Meaning(props) {
           </section>
         );
       })}
-      {props.meaning.synonyms && props.meaning.synonyms.length > 0 && (
+
+      {meaning.synonyms && meaning.synonyms.length > 0 && (
         <section>
           <strong>Synonyms: </strong>
-          <Synonyms synonyms={props.meaning.synonyms} />
+          <Synonyms 
+            synonyms={meaning.synonyms}
+            onSynonymClick={onSynonymClick} />
         </section>
       )}
     </div>

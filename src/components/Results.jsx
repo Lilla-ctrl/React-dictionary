@@ -2,13 +2,13 @@ import Meaning from "./Meaning";
 import Phonetics from "./Phonetics";
 import "../style/Results.css";
 
-export default function Results(props) {
-  if (props.results) {
+export default function Results({ results, onSynonymClick }) {
+  if (results) {
     return (
       <div className="results">
         <section>
-          <h2>{props.results.word}</h2>
-          {props.results.phonetics.map(function (phonetic, index) {
+          <h2>{results.word}</h2>
+          {results.phonetics.map(function (phonetic, index) {
             return (
               <div key={index}>
                 <Phonetics phonetic={phonetic} />
@@ -17,10 +17,10 @@ export default function Results(props) {
           })}
         </section>
 
-        {props.results.meanings.map(function (meaning, index) {
+        {results.meanings.map(function (meaning, index) {
           return (
             <section className="meaning" key={index}>
-              <Meaning meaning={meaning} />
+              <Meaning meaning={meaning} onSynonymClick={onSynonymClick} />
             </section>
           );
         })}

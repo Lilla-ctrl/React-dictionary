@@ -1,0 +1,24 @@
+.synonyms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.clickable-synonym {
+  background-color: #f7ebeb;
+  color: #01352c;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.clickable-synonym:hover {
+  background-color: #ffb5b5;
+  text-decoration: underline;
+}
