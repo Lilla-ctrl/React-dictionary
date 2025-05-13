@@ -1,4 +1,4 @@
-import "../style/pictures.css";
+import "../style/Pictures.css";
 
 export default function Pictures(props) {
   if (props.pictures) {
