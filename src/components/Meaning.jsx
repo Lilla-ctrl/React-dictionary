@@ -1,7 +1,7 @@
 import Synonyms from "./Synonyms";
 import "../style/Meaning.css";
 
-export default function Meaning({meaning, onSynonymClick}) {
+export default function Meaning({ meaning, onSynonymClick }) {
   return (
     <div className="meaning-group">
       <h3>{meaning.partOfSpeech}</h3>
@@ -14,7 +14,9 @@ export default function Meaning({meaning, onSynonymClick}) {
             {definition.example && (
               <>
                 <strong>Example: </strong>
-                <em>{definition.example}</em>
+                <em>
+                  <p>{definition.example}</p>
+                </em>
                 <br />
               </>
             )}
@@ -25,9 +27,10 @@ export default function Meaning({meaning, onSynonymClick}) {
       {meaning.synonyms && meaning.synonyms.length > 0 && (
         <section>
           <strong>Synonyms: </strong>
-          <Synonyms 
+          <Synonyms
             synonyms={meaning.synonyms}
-            onSynonymClick={onSynonymClick} />
+            onSynonymClick={onSynonymClick}
+          />
         </section>
       )}
     </div>
