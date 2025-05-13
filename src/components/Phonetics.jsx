@@ -1,5 +1,4 @@
 export default function Phonetics(props) {
-  console.log(props.phonetic)
   return (
     <div>
       <div>{props.phonetic.text}</div>

@@ -1,12 +1,13 @@
 import Synonyms from "./Synonyms";
+import "../style/Meaning.css";
 
 export default function Meaning(props) {
   return (
-    <div className="meaning">
+    <div className="meaning-group">
       <h3>{props.meaning.partOfSpeech}</h3>
       {props.meaning.definitions.map(function (definition, index) {
         return (
-          <div key={index}>
+          <section key={index}>
             <strong>Definition: </strong>
             <p>{definition.definition}</p>
             <br />
@@ -17,14 +18,14 @@ export default function Meaning(props) {
                 <br />
               </>
             )}
-          </div>
+          </section>
         );
       })}
       {props.meaning.synonyms && props.meaning.synonyms.length > 0 && (
-        <>
+        <section>
           <strong>Synonyms: </strong>
           <Synonyms synonyms={props.meaning.synonyms} />
-        </>
+        </section>
       )}
     </div>
   );
